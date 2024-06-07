@@ -1,0 +1,20 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - httpd
+    networks:
+      - my-network
+  httpd:
+    image: httpd:2.4
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
