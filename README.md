@@ -1,6 +1,6 @@
 # Nginx reverse proxy
 
-Nginx container proxy running
+Nginx container reverse proxy with latest nginx image
 
 spec
 
@@ -20,3 +20,10 @@ how to use
         }
 
 3. Adjust directory and domain target to use proxy
+4. Run this project with docker compose
+
+        docker compose up -d
+
+5. Test with this link
+
+        http://localhost/
