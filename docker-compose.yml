@@ -11,10 +11,6 @@ services:
       - httpd
     networks:
       - my-network
-  httpd:
-    image: httpd:2.4
-    networks:
-      - my-network
 networks:
   my-network:
     driver: bridge
